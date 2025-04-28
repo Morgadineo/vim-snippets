@@ -511,10 +511,11 @@ snippet numeric "methods for emulating a numeric type" b
 		${25:pass}
 
 # Comments
-snippet sep
-	#-->${1:texto}<--#`!p 
-	snip.rv = '#' * (80 - len(tabstop[1]) - 10 if len(tabstop[1]) + 10 <= 80 else ''
-	
+snippet sep "Python separator with dynamic ###" b
+	#-->${1:texto}<--#`!p
+	fill = '#' * (80 - (len(tabstop[1]) + 10))  # 10 = tamanho de "#--><--#"
+	snip.rv = fill if len(fill) > 0 else ''
+	`$0
 
 # Printing
 snippet pr
