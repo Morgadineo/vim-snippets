@@ -78,7 +78,9 @@ snippet dcl dataclass
 # New Function
 snippet def
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
-		"""${3:docstring for $1}"""
+		"""
+		${3}
+		"""
 		${0}
 snippet deff
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
@@ -507,6 +509,12 @@ snippet numeric "methods for emulating a numeric type" b
 
 	def __coerce__(self, other):
 		${25:pass}
+
+# Comments
+snippet sep
+	#-->${1:texto}<--#`!p snip.rv = '#' * (80 - len(tabstop[1]) - 10)`
+	${0}
+	
 
 # Printing
 snippet pr
