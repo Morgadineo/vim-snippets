@@ -512,8 +512,8 @@ snippet numeric "methods for emulating a numeric type" b
 
 # Comments
 snippet sep
-	#-->${1:texto}<--#`snip.rv = '#' * (80 - len(tabstop[1]) - 10)`
-	${0}
+	#-->${1:texto}<--#`!p 
+	snip.rv = '#' * (80 - len(tabstop[1]) - 10 if len(tabstop[1]) + 10 <= 80 else ''
 	
 
 # Printing
