@@ -13,6 +13,7 @@
       "*",
       "* Dificuldade: ${5}",
       "* Categoria  : ${6}",
+      "* Tipo       : ${7}",
       "**/"
     ],
     "description": "Description template for problems"
