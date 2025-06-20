@@ -1,0 +1,18 @@
+{
+  "Def Function": {
+    "prefix": "def",
+    "body": [
+      "def ${1:function_name}(${2:args}):",
+      "    ${0}"
+    ],
+    "description": "Define a function"
+  },
+  "Print Statement": {
+    "prefix": "p",
+    "body": [
+      "print(${1:'Hello, world!'})$0"
+    ],
+    "description": "Print to stdout"
+  }
+}
+
